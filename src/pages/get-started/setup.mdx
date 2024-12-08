@@ -1,0 +1,28 @@
+import { Callout } from "nextra/components";
+
+# Setting Up Website Tracking
+
+Adding Lynq tracking to your website is a simple two-step process. Just add our tracking script to your site's HTML, and you'll start seeing analytics data right away.
+
+## Installation
+
+Add the following code to the `<head>` section of your root HTML file:
+
+```js copy /"YOUR DOMAIN ID"/
+<script>
+!function(){"use strict";window.lynq=window.lynq||{track:function(n,e){(window.lynqQueue=window.lynqQueue||[]).push({name:n,properties:e,eventId:crypto.randomUUID()})}}}();
+</script>
+
+<script
+  async
+  src="https://cdn.jsdelivr.net/gh/harshturna/lynq-js@v1.0.6/dist/lynq.min.js"
+  data-domain="YOUR DOMAIN ID"
+  data-script-id="lynq"
+></script>
+```
+
+<Callout type="info">You can find your Domain ID in the Lynq Dashboard</Callout>
+
+## What's Next?
+
+That's it! Once you've added the script, Lynq will automatically begin tracking your website analytics. No additional configuration is required - you can start viewing your data directly in the Lynq Dashboard.

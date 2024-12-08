@@ -1,0 +1,33 @@
+import { Callout } from "nextra/components";
+
+# Custom Events
+
+Track specific user interactions in your application using Lynq's custom events. The `track()` function lets you capture actions like button clicks, purchases, or form submissions.
+
+## Basic Usage
+
+First, ensure you've [set up Lynq tracking](/get-started/setup). Then use the following syntax to track events:
+
+```js copy
+lynq.track("login");
+```
+
+<Callout type="info">
+  The `lynq` object is available globally on `window`, making it accessible
+  throughout your code
+</Callout>
+
+## Adding Event Properties
+
+Need to include additional details? Pass an object as the second argument:
+
+```js copy
+lynq.track("Subscription", { type: "Monthly" });
+```
+
+## Property Restrictions
+
+Event properties must follow these rules:
+
+- No nested objects or arrays
+- Only accepts: `string`, `number`, `boolean`, and `null` values
